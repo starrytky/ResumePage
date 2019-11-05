@@ -27,10 +27,12 @@ hr {
     border: 1px solid rgb(222, 222, 222);
 }
 
-ul {
+ul,ol {
     list-style-type: none;
 }
-
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
 .clearfix::after {
     content: '';
     display: block;
@@ -77,7 +79,6 @@ ul {
 
 .topNavBar .logo {
     font-size: 24px;
-    font-family: "黑体";
     font-weight: bold;
     color: rgb(229, 102, 107);
     padding-top: 4px;
@@ -96,7 +97,8 @@ ul {
 
 .banner .mask {
     height: 515px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(44, 51, 64, 0.8);
+
 }
 
 .userCard {
@@ -104,6 +106,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
 }
 
 .userCard .picture img {
@@ -143,7 +146,7 @@ ul {
 }
 
 .userCard .pictureAndText {
-    padding: 50px;
+    padding: 50px 50px 35px 50px;
 }
 
 .userCard .text .welcome {
@@ -188,10 +191,11 @@ ul {
     color: rgb(157, 160, 167);
 }
 
-.userCard .media{
-    background: rgb(232,103,107);
+.userCard .media {
+    background: rgb(232, 103, 107);
     text-align: center;
 }
+
 .userCard .media a {
     display: inline-block;
     width: 40px;
@@ -200,9 +204,11 @@ ul {
     border-radius: 50%;
     margin: 16px;
 }
+
 .userCard > footer.media > a:hover {
-    background: rgb(208,93,96);
+    background: rgb(208, 93, 96);
 }
+
 .userCard svg {
     height: 30px;
     width: 30px;
@@ -210,3 +216,157 @@ ul {
     vertical-align: top;
 }
 
+main {
+    margin-top: -345px;
+}
+
+main .downloadResume-wrapper {
+    text-align: center;
+}
+main .downloadResume {
+    padding: 23px 57px;
+    border: 1px solid #CBCDCF;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+    background: #EFEFEF;
+    color: #3d4451;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 32px 0;
+    transition: box-shadow .3s;
+}
+body > main .downloadResume:hover{
+    box-shadow: 0 4px 13px 0 rgba(0,0,0,0.2);
+}
+.selfIntroduction {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+section.skills,
+section.portfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+section.skills > h2,
+section.portfolio > h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+section.skills h3 {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+section.skills > ol{
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+    padding: 42px 50px 10px;
+}
+section.skills > ol > li {
+    float: left;
+    width: 47%;
+}
+section.skills > ol > li:nth-child(2n){
+    float: right;
+}
+section.skills .progressBar {
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+section.skills .progressBar .progress {
+    height: 100%;
+    background: #E6686A;
+    width: 83%;
+}
+section.skills li:nth-child(2) .progressBar .progress {
+    width: 82%;
+}
+section.skills li:nth-child(3) .progressBar .progress {
+    width: 85%;
+}
+section.skills li:nth-child(4) .progressBar .progress {
+    width: 70%;
+}
+section.skills li:nth-child(5) .progressBar .progress {
+    width: 72%;
+}
+section.skills li:nth-child(6) .progressBar .progress {
+    width: 75%;
+}
+section.portfolio nav {
+    text-align: center;
+}
+section.portfolio nav ol {
+    display: inline-block;
+    vertical-align: top;
+}
+section.portfolio nav ol li{
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+section.portfolio nav ol li:first-child{
+    margin-left: 0;
+}
+section.portfolio {
+    text-align: center;
+    margin-top: 72px;
+}
+section.portfolio nav {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 29px;
+}
+section.portfolio nav .bar {
+    height: 5px;
+    background: white;
+    border-radius:2px;
+    margin-top: 13px;
+}
+section.portfolio nav .bar-inner{
+    height: 100%;
+    background: #E8676B;
+    border-radius: 2px;
+    transition:all .4s;
+}
+section.portfolio nav .state-1.bar .bar-inner{
+    width: 32px;
+    margin-left: 0;
+}
+section.portfolio nav .state-2.bar .bar-inner{
+    width: 39px;
+    margin-left: 49px;
+}
+section.portfolio nav .state-3.bar .bar-inner{
+    width: 116px;
+    margin-left: 103px;
+}
+
+section.portfolio .works{
+    position: relative;
+    height: 576px;
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small {
+    position:absolute;
+}
+
+section.portfolio .works > .big img,
+section.portfolio .works > .small img{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+}

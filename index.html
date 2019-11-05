@@ -86,38 +86,80 @@
 
         </footer>
     </div>
-
-    <a class="button" href="#">下载pdf简历</a>
-    <p>唐坤宇，初级前端工程师，不断学习不断进步<br>
-        技能：前端开发，Node.js开发
+    <p class="downloadResume-wrapper">
+        <a class="downloadResume" href="#" target="_blank" download="">下载pdf简历</a>
     </p>
+    <div class="selfIntroduction">
+        <p>唐坤宇，初级前端工程师，不断学习不断进步<br>
+            技能：前端开发，Node.js开发
+        </p>
+    </div>
 </main>
-<section>
+<section class="skills">
     <h2>技能</h2>
-    <ol>
-        <li>HTML 5 &amp; CSS3</li>
-        <li>JavaScript</li>
-        <li>JQuery</li>
-        <li>Vue</li>
-        <li>React</li>
-        <li>HTTP</li>
+    <ol class="clearfix">
+        <li>
+            <h3>HTML 5 &amp; CSS3</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
+        <li>
+            <h3>JavaScript</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
+        <li>
+            <h3>JQuery</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
+        <li>
+            <h3>Vue.js</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
+        <li>
+            <h3>React</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
+        <li>
+            <h3>HTTP</h3>
+            <div class="progressBar">
+                <div class="progress"></div>
+            </div>
+        </li>
     </ol>
 </section>
-<section>
+<section class="portfolio">
     <h2>作品集</h2>
     <nav>
-        <ol>
-            <li>所有</li>
-            <li>框架</li>
-            <li>原生 JS &amp; CSS3</li>
+        <ol class="clearfix">
+            <li id="portfolioAll">所有</li>
+            <li id="portfolioFramework">框架</li>
+            <li id="portfolioValina">原生 JS &amp; CSS3</li>
         </ol>
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <div id="portfolioBar" class="bar state-1">
+            <div class="bar-inner"></div>
         </div>
     </nav>
+    <div class="works">
+        <div class="big" style="top: 0;left: 9px;">
+            <img src="./images/1.jpg" alt="作品1">
+        </div>
+        <div class="small" style="top: 0;left: 636px;">
+            <img src="./images/2.jpg" alt="作品2">
+        </div>
+        <div class="small" style="top: 298px;left: 636px;">
+            <img src="./images/3.jpg" alt="作品3">
+        </div>
+    </div>
 </section>
-
+<script src="js/index.js"></script>
 </body>
 </html>
