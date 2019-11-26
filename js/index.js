@@ -16,7 +16,26 @@ setTimeout(function () {
 }, 1000);
 
 window.onscroll = function(){
-    window.scrollY > 0 ? my$("topNavBar").classList.add("sticky"):my$("topNavBar").classList.remove("sticky")
+    window.scrollY > 0 ? my$("topNavBar").classList.add("sticky"):my$("topNavBar").classList.remove("sticky");
+    let specialTags = document.querySelectorAll("[data-x]");
+    let minIndex = 0;
+    for (let i = 1;i<specialTags.length; i++){
+        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[i-1].offsetTop - window.scrollY)){
+            minIndex = i;
+        }
+    }
+    for (let i = 0;i<specialTags.length;i++){
+        specialTags[i].classList.remove("active");
+    }
+    specialTags[minIndex].classList.add("active");
+    let id = specialTags[minIndex].id;
+    let a = document.querySelector('a[href=\"#'+id+'\"]');
+    let li = a.parentNode;
+    let brothersAndMe = li.parentNode.children;
+    for (let i=0;i<brothersAndMe.length;i++){
+        brothersAndMe[i].classList.remove("active");
+    }
+    li.classList.add("active");
 };
 
 let liTags = document.querySelectorAll("nav.menu > ul > li");
@@ -59,7 +78,6 @@ for (let i = 0;i<aTags.length;i++){
                 window.scrollTo(0,coords.y);
             })
             .start();
-
     }
 }
 
