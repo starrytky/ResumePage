@@ -12,21 +12,23 @@ my$("portfolioValina").onclick = function () {
 };
 
 let specialTags = document.querySelectorAll("[data-x]");
-for (let i = 1;i<specialTags.length; i++){
+for (let i = 0;i<specialTags.length; i++){
     specialTags[i].classList.add("offset");
 }
 
-yyy();
+
+findCloset();
 window.onscroll = function(){
     window.scrollY > 0 ? my$("topNavBar").classList.add("sticky"):my$("topNavBar").classList.remove("sticky");
-    yyy();
+    findCloset();
 };
-function yyy(){
+function findCloset(){
     let specialTags = document.querySelectorAll("[data-x]");
     let minIndex = 0;
     for (let i = 1;i<specialTags.length; i++){
         if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[i-1].offsetTop - window.scrollY)){
             minIndex = i;
+
         }
     }
     specialTags[minIndex].classList.remove("offset");
