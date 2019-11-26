@@ -24,18 +24,14 @@ window.onscroll = function(){
             minIndex = i;
         }
     }
-    for (let i = 0;i<specialTags.length;i++){
-        specialTags[i].classList.remove("active");
-    }
-    specialTags[minIndex].classList.add("active");
     let id = specialTags[minIndex].id;
     let a = document.querySelector('a[href=\"#'+id+'\"]');
     let li = a.parentNode;
     let brothersAndMe = li.parentNode.children;
     for (let i=0;i<brothersAndMe.length;i++){
-        brothersAndMe[i].classList.remove("active");
+        brothersAndMe[i].classList.remove("highlight");
     }
-    li.classList.add("active");
+    li.classList.add("highlight");
 };
 
 let liTags = document.querySelectorAll("nav.menu > ul > li");
