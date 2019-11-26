@@ -11,16 +11,13 @@ h4,
 h5,
 h6{    font-weight: normal;}
 .clearfix::after {    content: '';    display: block;    clear: both;}
-.loading{    width: 200px;    height: 200px;    position: relative;}
-.loading::before,
-.loading::after{    content:"";    width: 0;    height: 0;    position: absolute;    background: black;    border-radius: 50%;    top: 0;    left: 0;    right: 0;    bottom: 0;    margin:auto;    animation: s 1.2s linear infinite;}
-.loading::after{    animation-delay: 0.6s;}
-@keyframes s{
-    0%{        width:0;        height:0;        opacity:1;    }
-    100%{        width: 50px;        height: 50px;        opacity:0;    }
+[data-x].offset{
+    transform: translateY(170px);
 }
-.site-welcome{    display: none;    position: fixed;    top: 0;    left: 0;    width: 100%;    height: 100%;    background: rgba(43,46,54,0.6);    z-index: 3;    justify-content: center;    align-items: center;}
-.site-welcome.active{    display: flex;}
+[data-x] {
+    transform: translateY(0);
+    transition: all .5s;
+}
 .topNavBar {    padding: 25px 0 0;    position: fixed;    width: 100%; transition: all 1s;color: #b7b7b7}
 .topNavBar.sticky {    background: white; padding: 10px 0;  z-index: 1; box-shadow: 0 0 5px 3px rgba(0,0,0,.6);color: #3d4451}
 .topNavBar-inner > a {    float: left;    padding: 0 17px;}
@@ -78,8 +75,11 @@ section.skills h3 {    font-size: 14px;    line-height: 1.1;    padding-right: 4
 section.skills > ol{    background-color: white;    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);    padding: 42px 50px 10px;}
 section.skills > ol > li {    float: left;    width: 47%;}
 section.skills > ol > li:nth-child(2n){    float: right;}
-section.skills .progressBar {    height: 5px;    background: #FAE1E1;    border-radius: 2px;    margin: 4px 0 40px;}
-section.skills .progressBar .progress {    height: 100%;    background: #E6686A;    width: 83%;}
+section.skills .progressBar {    height: 5px;    background: #FAE1E1;    border-radius: 2px;    margin: 4px 0 40px;     overflow: hidden;}
+section.skills .progressBar .progress {    height: 100%;    background: #E6686A;    width: 83%;    transform: translateX(0);    transition: all 1s;}
+section.skills.offset .progress {
+    transform: translateX(-100%);
+}
 section.skills li:nth-child(2) .progressBar .progress {    width: 82%;}
 section.skills li:nth-child(3) .progressBar .progress {    width: 85%;}
 section.skills li:nth-child(4) .progressBar .progress {    width: 70%;}

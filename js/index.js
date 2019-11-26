@@ -11,12 +11,17 @@ my$("portfolioValina").onclick = function () {
     my$("portfolioBar").className = "bar state-3"
 };
 
-setTimeout(function () {
-    my$("siteWelcome").classList.remove('active');
-}, 1000);
+let specialTags = document.querySelectorAll("[data-x]");
+for (let i = 1;i<specialTags.length; i++){
+    specialTags[i].classList.add("offset");
+}
 
+yyy();
 window.onscroll = function(){
     window.scrollY > 0 ? my$("topNavBar").classList.add("sticky"):my$("topNavBar").classList.remove("sticky");
+    yyy();
+};
+function yyy(){
     let specialTags = document.querySelectorAll("[data-x]");
     let minIndex = 0;
     for (let i = 1;i<specialTags.length; i++){
@@ -24,6 +29,7 @@ window.onscroll = function(){
             minIndex = i;
         }
     }
+    specialTags[minIndex].classList.remove("offset");
     let id = specialTags[minIndex].id;
     let a = document.querySelector('a[href=\"#'+id+'\"]');
     let li = a.parentNode;
@@ -32,8 +38,7 @@ window.onscroll = function(){
         brothersAndMe[i].classList.remove("highlight");
     }
     li.classList.add("highlight");
-};
-
+}
 let liTags = document.querySelectorAll("nav.menu > ul > li");
 for (let i=0;i < liTags.length; i++){
     liTags[i].onmouseenter = function(x){
