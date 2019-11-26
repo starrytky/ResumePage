@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>tky-ResumePage</title>
+    <link href="https://cdn.bootcss.com/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="//at.alicdn.com/t/font_1491778_n0pdzqeo03r.js"></script>
 </head>
@@ -152,28 +153,27 @@
 </section>
 <section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
-    <nav>
-        <ol class="clearfix">
-            <li id="portfolioAll">所有</li>
-            <li id="portfolioFramework">框架</li>
-            <li id="portfolioValina">原生 JS &amp; CSS3</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-            <div class="bar-inner"></div>
-        </div>
-    </nav>
     <div class="works">
-        <div class="big" style="top: 0;left: 9px;">
-            <img src="./images/1.jpg" alt="作品1">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://starrytky.github.io/KeyboardNav/nav.html" target="_blank">
+                        <img src="./images/nav-page.jpg">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://starrytky.github.io/canvas/index.html" target="_blank">
+                        <img src="./images/canvas-page.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="small" style="top: 0;left: 636px;">
-            <img src="./images/2.jpg" alt="作品2">
-        </div>
-        <div class="small" style="top: 298px;left: 636px;">
-            <img src="./images/3.jpg" alt="作品3">
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
+<script src="https://cdn.bootcss.com/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="https://cdn.bootcss.com/tween.js/r14/Tween.js"></script>
 <script src="js/index.js"></script>
 </body>

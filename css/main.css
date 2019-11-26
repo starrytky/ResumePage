@@ -85,19 +85,30 @@ section.skills li:nth-child(3) .progressBar .progress {    width: 85%;}
 section.skills li:nth-child(4) .progressBar .progress {    width: 70%;}
 section.skills li:nth-child(5) .progressBar .progress {    width: 72%;}
 section.skills li:nth-child(6) .progressBar .progress {    width: 75%;}
-section.portfolio nav {    text-align: center;}
-section.portfolio nav ol {    display: inline-block;    vertical-align: top;}
-section.portfolio nav ol li{    float: left;    margin-left: 20px;    cursor: pointer;}
-section.portfolio nav ol li:first-child{    margin-left: 0;}
-section.portfolio {    text-align: center;    margin-top: 72px;}
-section.portfolio nav {    display: inline-block;    vertical-align: top;    margin-bottom: 29px;}
-section.portfolio nav .bar {    height: 5px;    background: white;    border-radius:2px;    margin-top: 13px;}
-section.portfolio nav .bar-inner{    height: 100%;    background: #E8676B;    border-radius: 2px;    transition:all .4s;}
-section.portfolio nav .state-1.bar .bar-inner{    width: 32px;    margin-left: 0;}
-section.portfolio nav .state-2.bar .bar-inner{    width: 39px;    margin-left: 49px;}
-section.portfolio nav .state-3.bar .bar-inner{    width: 116px;    margin-left: 103px;}
-section.portfolio .works{    position: relative;    height: 576px;}
-section.portfolio .works > .big,
-section.portfolio .works > .small {    position:absolute;}
-section.portfolio .works > .big img,
-section.portfolio .works > .small img{    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);}
+section.portfolio {
+    text-align: center;
+    margin-bottom: 100px;
+    max-width: 720px;
+}
+.section.portfolio h2 {
+    margin-bottom: 32px;
+}
+
+section.portfolio .works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.portfolio .swiper-slide img{    display: block;    margin-left: auto;    margin-right: auto;    width: 100%;}
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next {background-color: rgba(255,255,255,.6);    width: 60px;    height: 60px;   border-radius: 50%;}
+section.portfolio .swiper-button-prev{
+    right: 105%;
+    left: auto;
+}
+section.portfolio .swiper-button-next{
+     left: 105%;
+     right: auto;
+ }
+
+

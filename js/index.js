@@ -1,15 +1,6 @@
 let my$ = function (id) {
     return document.getElementById(id);
 };
-my$("portfolioAll").onclick = function () {
-    my$("portfolioBar").className = "bar state-1"
-};
-my$("portfolioFramework").onclick = function () {
-    my$("portfolioBar").className = "bar state-2"
-};
-my$("portfolioValina").onclick = function () {
-    my$("portfolioBar").className = "bar state-3"
-};
 
 let specialTags = document.querySelectorAll("[data-x]");
 for (let i = 0;i<specialTags.length; i++){
@@ -83,4 +74,17 @@ for (let i = 0;i<aTags.length;i++){
             .start();
     }
 }
-
+var mySwiper = new Swiper ('.swiper-container', {
+    slidesPerView : 1,
+    centeredSlides : true,
+    centeredSlidesBounds: true,
+    centerInsufficientSlides: true,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
