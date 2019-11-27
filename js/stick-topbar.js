@@ -1,26 +1,22 @@
-let my$ = function (id) {
-    return document.getElementById(id);
-};
-
-window.addEventListener("scroll", function(){
-    window.scrollY > 0 ? my$("topNavBar").classList.add("sticky"):my$("topNavBar").classList.remove("sticky");
-    findCloset();
-});
-
-function findCloset(){
-    let specialTags = document.querySelectorAll("[data-x]");
-    let minIndex = 0;
-    for (let i = 1;i<specialTags.length; i++){
-        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[i-1].offsetTop - window.scrollY)){
-            minIndex = i;
+!function () {
+    let view = document.querySelector("#topNavBar");
+    let controller = {
+        view: null,
+        init: function (view) {
+            this.view = view;
+            this.bindEvents();
+        },
+        bindEvents: function () {
+            window.addEventListener("scroll", () => {
+                window.scrollY > 0 ? this.active() : this.disActive();
+            });
+        },
+        active: function () {
+            this.view.classList.add("sticky");
+        },
+        disActive: function () {
+            this.view.classList.remove("sticky");
         }
-    }
-    let id = specialTags[minIndex].id;
-    let a = document.querySelector('a[href=\"#'+id+'\"]');
-    let li = a.parentNode;
-    let brothersAndMe = li.parentNode.children;
-    for (let i=0;i<brothersAndMe.length;i++){
-        brothersAndMe[i].classList.remove("highlight");
-    }
-    li.classList.add("highlight");
-}
+    };
+    controller.init(view);
+}.call();
