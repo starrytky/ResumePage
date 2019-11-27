@@ -86,7 +86,7 @@ section.skills li:nth-child(6) .progressBar .progress {    width: 75%;}
 section.portfolio {    text-align: center;    margin-bottom: 100px;    max-width: 720px;}
 .section.portfolio h2 {    margin-bottom: 32px;}
 section.portfolio .works{    display: flex;    justify-content: center;    align-items: center;}
-section.portfolio .swiper-slide img{    display: block;    margin-left: auto;    margin-right: auto;    width: 100%;}
+section.portfolio .swiper-slide img{    display: block;    margin-left: auto;    margin-right: auto;    width: 100%;    border:none;}
 section.portfolio .swiper-button-prev,
 section.portfolio .swiper-button-next {background-color: rgba(255,255,255,.6);    width: 60px;    height: 60px;   border-radius: 50%;}
 section.portfolio .swiper-button-prev{    right: 105%;    left: auto;}
