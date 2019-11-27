@@ -77,38 +77,19 @@ section.skills > ol > li {    float: left;    width: 47%;}
 section.skills > ol > li:nth-child(2n){    float: right;}
 section.skills .progressBar {    height: 5px;    background: #FAE1E1;    border-radius: 2px;    margin: 4px 0 40px;     overflow: hidden;}
 section.skills .progressBar .progress {    height: 100%;    background: #E6686A;    width: 83%;    transform: translateX(0);    transition: all 1s;}
-section.skills.offset .progress {
-    transform: translateX(-100%);
-}
+section.skills.offset .progress {    transform: translateX(-100%);}
 section.skills li:nth-child(2) .progressBar .progress {    width: 82%;}
 section.skills li:nth-child(3) .progressBar .progress {    width: 85%;}
 section.skills li:nth-child(4) .progressBar .progress {    width: 70%;}
 section.skills li:nth-child(5) .progressBar .progress {    width: 72%;}
 section.skills li:nth-child(6) .progressBar .progress {    width: 75%;}
-section.portfolio {
-    text-align: center;
-    margin-bottom: 100px;
-    max-width: 720px;
-}
-.section.portfolio h2 {
-    margin-bottom: 32px;
-}
-
-section.portfolio .works{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+section.portfolio {    text-align: center;    margin-bottom: 100px;    max-width: 720px;}
+.section.portfolio h2 {    margin-bottom: 32px;}
+section.portfolio .works{    display: flex;    justify-content: center;    align-items: center;}
 section.portfolio .swiper-slide img{    display: block;    margin-left: auto;    margin-right: auto;    width: 100%;}
 section.portfolio .swiper-button-prev,
 section.portfolio .swiper-button-next {background-color: rgba(255,255,255,.6);    width: 60px;    height: 60px;   border-radius: 50%;}
-section.portfolio .swiper-button-prev{
-    right: 105%;
-    left: auto;
-}
-section.portfolio .swiper-button-next{
-     left: 105%;
-     right: auto;
- }
+section.portfolio .swiper-button-prev{    right: 105%;    left: auto;}
+section.portfolio .swiper-button-next{     left: 105%;     right: auto; }
 
 
