@@ -31,13 +31,13 @@ h6{    font-weight: normal;}
     0%{        width: 0;    }
     100%{        width: 100%;    }
 }
-.topNavBar .submenu{    display: none;    position: absolute;    top: 100%;    right: 0;    background: white;    color: #3d4451;    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);    animation: submenuSlide .3s;}
+.topNavBar .submenu{    display: none;    position: absolute;    top: 100%;    left: -16px;    background: rgba(225,225,225, .3);    color: #3d4451;    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2); border-radius: 5px;  animation: submenuSlide .3s;}
 nav  li.active > .submenu{    display: block;}
 @keyframes submenuSlide {
     0%{        margin-right: 100%;    }
     100%{        margin-right: 0;    }
 }
-.topNavBar .submenu > li {    white-space: nowrap;    padding: 10px;}
+.topNavBar .submenu > li {    white-space: nowrap;    padding: 10px; opacity: 1;}
 .topNavBar .logo {    font-size: 24px;    font-weight: bold;    color: rgb(229, 102, 107);    padding-top: 4px;    padding-bottom: 5px;}
 .topNavBar .logo .card {    color: rgb(154, 157, 162);}
 .banner {    height: 516px;    background: url(../images/rs-cover-2-2-1-1.jpg) center center;    background-size: cover;}
